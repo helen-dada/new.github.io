@@ -1,0 +1,85 @@
+
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/fontello.woff2?53658252') format('woff2'),
+       url('../fonts/fontello.woff?53658252') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  }
+ 
+.icon-envelope:before { content: '\e800'; } 
+.icon-phone-call:before { content: '\e801'; }
+.icon-plug:before { content: '\e802'; }
+.icon-paper-plane:before { content: '\e803'; } 
+
+$color-text:rgb(3, 67, 110);
+
+body {
+  background-color: #02818A;
+  font-family: Comic Sans MS;
+}
+
+b {
+color: $color-text;
+}
+
+a:visited {
+  color: $color-text;
+}
+
+  .flex {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+ justify-content: space-evenly;
+}
+
+figure {
+  margin: 3px;
+  display: inline-block;
+}
+
+@media screen and (min-device-aspect-ratio: 16/9) { 
+  .grid {
+    display: grid;
+    grid-template-columns: 30% 30% 1fr;
+    grid-gap: 10px;
+    }
+}
+
+@media screen and (min-device-aspect-ratio: 9/16) { 
+  .grid {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    }
+}
+  p {
+    font-size: 18px;
+font-family: Comic Sans MS;
+  }
+
+  h1, h2, li {
+    margin-left: 2cm;
+  }
+
+  li {
+    font-size: 20px;
+  }
+
+h1 {
+font-family: Comic Sans MS;
+  }
+
+  .grid > div {
+  background-color: #4495d4;
+  padding: .5em;
+  text-align: justify;
+  }

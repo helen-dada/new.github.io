@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Lena_S</title>
+
+</head>
+
+  <body>
+      <div class="grid">
+        <div>
+         <h1 align="center">Кратко обо мне</h1>
+         <p>
+         Начнём с&nbsp;формального, по&nbsp;бумажкам. Есть паспорт на&nbsp;имя <b>Елены</b>, с&nbsp;пропиской в&nbsp;Архангельске, 
+          ничего интересного. Свидетельсвто о&nbsp;рождении, грамота за&nbsp;первое место в&nbsp;категории настольный 
+          теннис из&nbsp;детского лагеря (конечно, других участниц&nbsp;же не&nbsp;было!), диплом... философа. 
+          Поэтому иногда я&nbsp;похожа на&nbsp;этого чувака:
+         </p>
+         <p>
+    	      <img src="../assets/why.jpg"
+       title="why are you here"
+       alt=""
+      width = "300px"
+      height = auto
+      >
+    </p>
+        </div>
+    
+    <div>
+    <p>
+    Родилась при Cоветском Cоюзе, но&nbsp;мало что о&nbsp;нём помню: ну&nbsp;вот 
+    манная каша была вкусной у&nbsp;мамы, но&nbsp;никак не&nbsp;в&nbsp;детсаде, 
+    и&nbsp;арахис продавался в&nbsp;скорлупе.
+    </p>
+    
+    <p>
+    Люблю море летом и&nbsp;лучше не&nbsp;Белое. Всякие британские учёные подсчитывают, 
+    какую часть нашей жизни мы&nbsp;проводим во&nbsp;сне, или в&nbsp;душе, или у&nbsp;телевизора... 
+    Если поддаться их&nbsp;логике и&nbsp;посчитать, то&nbsp;где-то тридцатую часть своей я&nbsp;провела 
+    поблизости от&nbsp;моря, так что в&nbsp;герои &laquo;Достучаться до&nbsp;небес&raquo; меня&nbsp;бы 
+    не&nbsp;взяли.
+    </p>
+
+    <p>
+   Ещё люблю <a href="https://www.youtube.com/watch?v=9FEePMXQnaI" target="_blank">математику</a>, 
+   <a href="#films">хорошее кино</a>, 
+   книги, 
+   играть в&nbsp;<a href="https://vk.com/60sec_arh" target="_blank">60&nbsp;секунд</a> 
+   и&nbsp;сайт <a href="https://arzamas.academy/special/nytv" target="_blank">арзамас</a>.
+    </p>
+
+    <h2>Как со&nbsp;мной связаться:</h2>
+
+    <p><figure class="icon-envelope"></figure> e.a.semyonova.87@gmail.com</p>
+    <p><figure class="icon-paper-plane"></figure> Helen +7(950)963-81-87</p>
+    
+    </div>
+
+    <div>
+
+      {% set films = [
+  { code: '575697', name: 'Клуб &laquo;CBGB&raquo;' },
+  { code: '208053', name: 'Не&nbsp;волнуйся, у&nbsp;меня всё нормально' },
+  { code: '9691', name: 'Бесславные ублюдки' },
+  { code: '3563', name: 'Трасса 60'},
+  { code: '4917', name: 'Святые из&nbsp;трущоб' },
+  { code: '502', name: '12 обезьян' },
+  { code: '586584', name: 'Семь психопатов' },
+  { code: '798068', name: 'Комната' },
+] %}
+
+<h2 id="films">Любимые фильмы</h2>
+<ul class = "flex">
+  {% for film in films %}
+         <li>
+        <a href="https://www.kinopoisk.ru/film/{{film.code}}" target="_blank"> {{film.name}}</a></br>
+        <img src="../assets/{{film.code}}.jpg"
+       alt=""
+      width = "17%";
+      height = auto;
+      </li>         
+  {% endfor %}
+</ul>
+    </div>
+    </div>
+
+{% include 'blocks/footer.html' %}
+
+  </body>
+
+</html>
+
