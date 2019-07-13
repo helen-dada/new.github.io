@@ -1,2 +1,2 @@
 # new.github.io
-second
+homework repository
